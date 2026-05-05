@@ -213,15 +213,16 @@ body {
 
 .home__right {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
-.img2 {
+.home__asset {
   width: 300px;
   height: auto;
 }
 
-.img2 > img {
+.home__asset > img {
   width: 300px;
 }
 
@@ -673,10 +674,10 @@ body {
     gap: 20px;
   }
 
-  .img2 {
+  .home__asset {
     width: 230px;
   }
-  .img2 > img {
+  .home__asset > img {
     width: 100%;
   }
 
@@ -983,7 +984,7 @@ body {
     flex-direction: column;
   }
 
-  .img2 > img {
+  .home__asset > img {
     width: 250px;
   }
 
