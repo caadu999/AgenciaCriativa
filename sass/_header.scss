@@ -1,0 +1,63 @@
+@use "variaveis";
+@use "mixins";
+
+.first-container {
+  border-radius: 24px;
+  margin: 24px;
+  height: auto;
+  height: 95.7vh;
+  padding: 24px;
+  background-image: url(../imagens/header_bg.avif);
+  background-size: cover;
+  background-attachment: fixed;
+
+  .header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+    padding: 0rem 4rem 0rem 4rem;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+
+    &__logo {
+      height: 100%;
+    }
+
+    &__button {
+      @include mixins.botao(1.5em);
+
+      font-weight: 900;
+      border: none;
+      background-color: white;
+      color: black;
+    }
+
+    .nav {
+      &__list {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        font-size: 1em;
+        font-family: "MonumentBold";
+
+        .nav__item {
+          display: flex;
+
+          .nav__link {
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            transition: all 0.3s ease-in-out;
+            font-size: 1.2em;
+
+            &:hover {
+              color: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}

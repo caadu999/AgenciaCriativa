@@ -1,0 +1,90 @@
+@use "variaveis";
+@use "mixins";
+
+.depoimentos {
+  .divisor {
+    @include mixins.divisor(white);
+  }
+
+  .subtitle {
+    @include mixins.subtitle(white);
+  }
+
+  .titles__main {
+    position: relative;
+    padding-left: 35px;
+  }
+  .titles__main::before {
+    @include mixins.bolinha(white);
+  }
+  .clientes {
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    min-height: 500px;
+    margin: 0 auto;
+    border-radius: 24px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+
+    &__aspas {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      width: 50%;
+
+      .fa-quote-left {
+        color: #747474;
+        font-size: 4.5em;
+      }
+    }
+    &__depoimento {
+      font-family: "Inter", sans-serif;
+      font-size: 1.6em;
+      font-weight: 700;
+      font-style: italic;
+      text-align: end;
+      color: #1e1e1e;
+    }
+    &__estrelas {
+      color: #1e1e1e;
+      font-size: 2em;
+      text-align: end;
+    }
+    &__img {
+      width: 50%;
+      border-radius: 24px;
+      background-color: grey;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      justify-content: end;
+      gap: 5px;
+      background-image: url(../imagens/bdab2d7ac3d6c072851d866a16edbac8.jpg);
+      background-size: cover;
+    }
+
+    &__nome {
+      color: white;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 1.6em;
+    }
+
+    &__sobre {
+      font-size: 1em;
+      color: rgb(255, 255, 255);
+      font-family: "Inter";
+      font-weight: 200;
+    }
+    &__nome {
+      font-size: 1em;
+      color: rgb(255, 255, 255);
+      font-family: "Inter", sans-serif;
+      font-weight: 200;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "variaveis";
+@use "mixins";
+
+@font-face {
+  font-family: "MonumentBold";
+  src: url(../fontes/MonumentExtended-Ultrabold.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fontes/Inter-Regular.otf) format("opentype");
+  font-weight: normal;
+  font-style: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../fontes/Inter-Bold.otf) format("opentype");
+  font-weight: normal;
+  font-style: 700;
+}
+
+.titles {
+  display: flex;
+  color: white;
+  font-family: "MonumentBold";
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-left: 230px;
+  margin-right: 230px;
+
+  h2 {
+    font-size: 6em;
+    line-height: 100px;
+    margin-bottom: 15px;
+  }
+}
+
+.titles--black {
+  color: black;
+}

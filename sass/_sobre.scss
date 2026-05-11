@@ -1,0 +1,128 @@
+@use "variaveis";
+@use "mixins";
+
+.sobre {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  &__numero {
+    position: relative;
+    top: 108px;
+  }
+
+  .divisor {
+    @include mixins.divisor(white);
+  }
+
+  .subtitle {
+    @include mixins.subtitle(white);
+  }
+
+  .titles__main {
+    position: relative;
+    padding-left: 35px;
+  }
+  .titles__main::before {
+    @include mixins.bolinha(white);
+  }
+  &__layout {
+    width: 620px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__texto {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: end;
+    margin-bottom: 20px;
+  }
+  &__linha {
+    margin: auto;
+    height: 2px;
+    width: 90%;
+    background-color: white;
+  }
+  &__container {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  &__bottom-left {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 24px;
+  }
+
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+  &__bottom-right {
+    height: 180px;
+    width: 300px;
+    background-color: wheat;
+    border-radius: 24px;
+  }
+  &__bottom-text {
+    font-size: 1.4em;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+    text-align: end;
+  }
+  &__conteudo {
+    display: flex;
+    margin: auto;
+    gap: 35px;
+    align-items: center;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 20px;
+
+    .social-icon {
+      display: flex;
+      width: 70px;
+      height: 70px;
+      background-color: #6e6e6e;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      .fa-brands {
+        font-size: 1.6em;
+      }
+
+      .fa-whatsapp {
+        font-size: 2.2em;
+      }
+    }
+  }
+
+  &__mapa {
+    width: 450px;
+    height: 500px;
+    border-radius: 24px;
+    background-color: gray;
+  }
+
+  &__asset {
+    font-size: 12em;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    text-align: end;
+    top: -40px;
+    left: 30px;
+  }
+}
